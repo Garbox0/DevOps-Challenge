@@ -6,7 +6,7 @@ services:
       context: ./Flask-Example
       dockerfile: Dockerfile.flask
     ports:
-      - "5000:5000"
+      - "5001:5001"
     depends_on:
       - angular
 

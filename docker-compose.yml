@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  flask:
+    build:
+      context: ./Flask-Example
+      dockerfile: Dockerfile.flask
+    ports:
+      - "5000:5000"
+    depends_on:
+      - angular
+
+  angular:
+    build:
+      context: ./angular-realworld-example-app
+      dockerfile: Dockerfile.angular
+    ports:
+      - "80:80"
